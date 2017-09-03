@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='file:/G:/workspace/Anypointworkspace/tidesandcurrents-connector/target/update-site/ - artifacts' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1504410703509'/>
+    <property name='p2.compressed' value='false'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='2'>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.tidesandcurrents-connector.3.5.0' version='1.0.0.201709022351'>
+      <properties size='4'>
+        <property name='artifact.size' value='650'/>
+        <property name='download.size' value='650'/>
+        <property name='download.md5' value='c8df8864af203883f6b0156434fd67a3'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.contribution.tidesandcurrents.3.5.0' version='1.0.0.201709022351'>
+      <properties size='3'>
+        <property name='artifact.size' value='337997'/>
+        <property name='download.size' value='337997'/>
+        <property name='download.md5' value='9bdd61150292b7f7868ef696e38d89a9'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>

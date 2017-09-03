@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<namespace xmlns="http://www.mulesoft.org/schema/mule/tooling.attributes" xmlns:mule="http://www.mulesoft.org/schema/mule/core" url="http://www.mulesoft.org/schema/mule/tidesandcurrents" prefix="tidesandcurrents">
+  <global-cloud-connector versions="[3.5.0,8.0.0]" caption="Tidesandcurrents" description="" icon="" localId="parentConfig" image="" abstract="true" extends="http://www.mulesoft.org/schema/mule/tidesandcurrents/abstractTidesandcurrentsConnectorGeneric"></global-cloud-connector>
+  <global-cloud-connector versions="[3.5.0,8.0.0]" caption="Tidesandcurrents: Configuration" description="Global Configuration configuration information." icon="icons/theme.classic/tidesandcurrents-connector-small.png" localId="config" image="icons/theme.classic/tidesandcurrents-connector-large.png" abstract="false" extends="http://www.mulesoft.org/schema/mule/tidesandcurrents/parentConfig" connectivityTesting="off" metaData="static" metaDataKeyDisplay="DISPLAY_NAME" supportsUserDefinedMetaData="false">
+    <attribute-category caption="General" description="Tidesandcurrents configuration properties.">
+      <group id="tidesandcurrentsGenericProperties" caption="Basic Settings">
+        <name name="name" caption="Name" description="Give a name to this configuration so it can be later referenced by config-ref." required="true"></name>
+      </group>
+      <group id="general" caption="General">
+        <string defaultValue="Hello" name="greeting" caption="Greeting" description="Greeting message." supportsExpressions="false" required="false" javaType="java.lang.String"></string>
+        <string defaultValue="How are you?" name="reply" caption="Reply" description="Reply message." supportsExpressions="false" required="false" javaType="java.lang.String"></string>
+      </group>
+    </attribute-category>
+  </global-cloud-connector>
+  <cloud-connector caption="Abstracttidesandcurrentsconnectorgeneric" description="Interact with Tidesandcurrents." icon="icons/theme.classic/tidesandcurrents-connector-small.png" localId="abstractTidesandcurrentsConnectorGeneric" image="icons/theme.classic/tidesandcurrents-connector-large.png" abstract="true">
+    <attribute-category caption="General" description="General.">
+      <group id="abstractTidesandcurrentsConnectorGeneric" caption="Basic Settings">
+        <globalRef requiredType="http://www.mulesoft.org/schema/mule/tidesandcurrents/config" name="config-ref" caption="Connector Configuration" description="Specify which configuration to use for this invocation." required="true"></globalRef>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector versions="[3.5.0,8.0.0]" aliasId="org.mule.tooling.ui.modules.core.pattern.tidesandcurrents" caption="Tidesandcurrents" description="" icon="icons/theme.classic/tidesandcurrents-connector-small.png" localId="tidesandcurrents-connector" image="icons/theme.classic/tidesandcurrents-connector-large.png" extends="http://www.mulesoft.org/schema/mule/tidesandcurrents/abstractTidesandcurrentsConnectorGeneric">
+    <attribute-category caption="General" description="General.">
+      <group id="tidesandcurrentsConnectorGeneric" caption="Basic Settings">
+        <modeSwitch alwaysCombo="true" name="Tidesandcurrents operations to execute" caption="Operation" description="Operation.">
+          <no-operation abstractElement="http://www.mulesoft.org/schema/mule/tidesandcurrents/abstractTidesandcurrentsConnectorGeneric" versions="[3.5.0,8.0.0]" connector-name="processor"></no-operation>
+          <mode modeId="http://www.mulesoft.org/schema/mule/tidesandcurrents/get-currents-and-tides" modeLabel="Get currents and tides"></mode>
+        </modeSwitch>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" caption="Get Currents And Tides" icon="icons/theme.classic/tidesandcurrents-connector-small.png" localId="get-currents-and-tides" image="icons/theme.classic/tidesandcurrents-connector-large.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/tidesandcurrents/abstractTidesandcurrentsConnectorGeneric" metaData="static">
+    <attribute-category caption="General" description="General.">
+      <group id="general" caption="General">
+        <string name="application" caption="Application" description="" required="true" javaType="java.lang.String"></string>
+        <string name="begin_date" caption="Begin_date" description="" required="true" javaType="java.lang.String"></string>
+        <string name="end_date" caption="End_date" description="" required="true" javaType="java.lang.String"></string>
+        <string name="format" caption="Format" description="" required="true" javaType="java.lang.String"></string>
+        <string name="product" caption="Product" description="" required="true" javaType="java.lang.String"></string>
+        <string name="station" caption="Station" description="" required="true" javaType="java.lang.String"></string>
+        <string name="time_zone" caption="Time_zone" description="" required="true" javaType="java.lang.String"></string>
+        <string name="units" caption="Units" description="" required="true" javaType="java.lang.String"></string>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+</namespace>
